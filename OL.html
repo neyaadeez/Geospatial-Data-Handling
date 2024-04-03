@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OL</title>
+    <script src="https://openlayers.org/api/OpenLayers.js"></script>
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        console.log("Hola, all!");
+        alert("Hello JS World!");
+
+        var locations = [
+            // Define your sampled locations with their coordinates and labels
+            // MyHome
+            { label: "MyHome", latitude: 34.030660, longitude: -118.288260 },
+            // Departments
+            { label: "MarshalDep", latitude: 34.0187744, longitude: -118.2854842 },
+            { label: "DornsifeDep", latitude: 34.0193267, longitude: -118.2872093 },
+            { label: "CinematicArtDep", latitude: 34.0230609, longitude: -118.2861595 },
+            // WaterWorks
+            { label: "WaterWork1", latitude: 34.0203106, longitude: -118.2853017 },
+            { label: "ViterbiWaterW", latitude: 34.0206833, longitude: -118.2891651 },
+            { label: "WaterWorkLeavy", latitude: 34.0222326, longitude: -118.283349 },
+            // CoffeeShops
+            { label: "StarBucksVilage", latitude: 34.0246307, longitude: -118.2843846 },
+            { label: "LeavyStarBucks", latitude: 34.0213515, longitude: -118.2825773 },
+            { label: "Dulce", latitude: 34.0252522, longitude: -118.2854137 },
+            // BlueEmergencyLights
+            { label: "BlueLight1", latitude: 34.0218576, longitude: -118.2850095 },
+            { label: "BlueLight2", latitude: 34.0212782, longitude: -118.287513 },
+            { label: "BlueLight3", latitude: 34.0210432, longitude: -118.2846021 }
+        ];
+
+        // Store locations in localStorage
+        localStorage.setItem("myData", JSON.stringify(locations));
+
+        // Retrieve stored data
+        var storedLocations = JSON.parse(localStorage.getItem("myData"));
+        console.log(storedLocations);
+
+        function initMap() {
+            map = new OpenLayers.Map('map');
+            basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+            map.addLayer(basemap);
+            markers = new OpenLayers.Layer.Markers("Markers");
+            map.addLayer(markers);
+
+            // Loop through stored locations and add markers
+            storedLocations.forEach(location => {
+                addMarker(location.latitude, location.longitude);
+            });
+
+            // Adjust zoom level based on the number of markers
+            var bounds = markers.getDataExtent();
+            if (bounds) {
+                map.zoomToExtent(bounds);
+            } else {
+                // Set default center and zoom level if no markers are available
+                var defaultCenter = new OpenLayers.LonLat(-118.285, 34.021)
+                    .transform(
+                        new OpenLayers.Projection("EPSG:4326"),
+                        map.getProjectionObject()
+                    );
+                map.setCenter(defaultCenter, 14); // Adjust zoom level as needed
+            }
+        }
+
+        function addMarker(latitude, longitude) {
+            var lonLat = new OpenLayers.LonLat(longitude, latitude)
+                .transform(
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    map.getProjectionObject() // to Spherical Mercator Projection
+                );
+            var point = new OpenLayers.Marker(lonLat);
+            markers.addMarker(point);
+        }
+
+        // Load and setup map layers
+        initMap();
+    </script>
+
+</body>
+
+</html>

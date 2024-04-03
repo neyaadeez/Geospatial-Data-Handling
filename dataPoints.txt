@@ -1,0 +1,22 @@
+Home:
+- MyHome: -118.288260, 34.030660
+
+Departments:
+- MarshalDep: -118.2854842, 34.0187744
+- DornsifeDep: -118.2872093, 34.0193267
+- CinematicArtDep: -118.2861595, 34.0230609
+
+WaterWorks:
+- WaterWork1: -118.2853017, 34.0203106
+- ViterbiWaterW: -118.2891651, 34.0206833
+- WaterWorkLeavy: -118.283349, 34.0222326
+
+CoffeeShops:
+- StarBucksVilage: -118.2843846, 34.0246307
+- LeavyStarBucks: -118.2825773, 34.0213515
+- Dulce: -118.2854137, 34.0252522
+
+BlueEmergencyLights:
+- BlueLight1: -118.2850095, 34.0218576
+- BlueLight2: -118.287513, 34.0212782
+- BlueLight3: -118.2846021, 34.0210432

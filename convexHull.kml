@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Folder>
+<name>Home</name>
+<Placemark><name>MyHome</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.288260, 34.030660</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>Departments</name>
+<Placemark><name>MarshalDep</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2854842, 34.0187744</coordinates></Point>
+</Placemark>
+<Placemark><name>DornsifeDep</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2872093, 34.0193267</coordinates></Point>
+</Placemark>
+<Placemark><name>CinematicArtDep</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2861595, 34.0230609</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>WaterWorks</name>
+<Placemark><name>WaterWork1</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2853017, 34.0203106</coordinates></Point>
+</Placemark>
+<Placemark><name>ViterbiWaterW</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2891651, 34.0206833</coordinates></Point>
+</Placemark>
+<Placemark><name>WaterWorkLeavy</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.283349, 34.0222326</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>CoffeeShops</name>
+<Placemark><name>StarBucksVilage</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2843846, 34.0246307</coordinates></Point>
+</Placemark>
+<Placemark><name>LeavyStarBucks</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2825773, 34.0213515</coordinates></Point>
+</Placemark>
+<Placemark><name>Dulce</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2854137, 34.0252522</coordinates></Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>BlueEmergencyLights</name>
+<Placemark><name>BlueLight1</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2850095, 34.0218576</coordinates></Point>
+</Placemark>
+<Placemark><name>BlueLight2</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287513, 34.0212782</coordinates></Point>
+</Placemark>
+<Placemark><name>BlueLight3</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2846021, 34.0210432</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>ConvexHull</name>
+<Placemark>
+<name>ConvexHullall</name>
+<Style><LineStyle><color>ffff7d53</color></LineStyle><PolyStyle><color>80fe4d28</color></PolyStyle></Style>
+<Polygon>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+-118.285484199999999,34.018774399999998 -118.287209300000001,34.019326700000001 -118.289165100000005,34.020683300000002 -118.288259999999994,34.030659999999997 -118.284384599999996,34.024630700000003 -118.2825773,34.021351500000002 -118.285484199999999,34.018774399999998
+</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</Placemark>
+</Folder>
+
+</Document>
+</kml>
