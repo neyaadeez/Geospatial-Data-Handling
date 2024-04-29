@@ -46,5 +46,3 @@ A Geographic Information System (GIS) is a framework for gathering, managing, an
 - Implement additional spatial queries and analysis.
 - Enhance user interface for better interaction with spatial data.
 - Explore advanced visualization techniques for geospatial data.
-
-**Let's explore the world through geospatial data!** 🌍✨
